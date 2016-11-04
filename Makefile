@@ -79,7 +79,7 @@ build: $(RELEASE_DIR)/$(ttnbin) $(RELEASE_DIR)/$(ttnctlbin)
 
 docker: TARGET_PLATFORM = linux-amd64
 docker: clean $(RELEASE_DIR)/$(ttnbin)
-	docker build -t thethingsnetwork/ttn -f Dockerfile.local .
+	docker build -t thethingsnetwork/ttn:local -f Dockerfile.local .
 
 package: $(RELEASE_DIR)/$(ttnpkg).zip $(RELEASE_DIR)/$(ttnpkg).tar.gz $(RELEASE_DIR)/$(ttnpkg).tar.xz $(RELEASE_DIR)/$(ttnctlpkg).zip $(RELEASE_DIR)/$(ttnctlpkg).tar.gz $(RELEASE_DIR)/$(ttnctlpkg).tar.xz
 
