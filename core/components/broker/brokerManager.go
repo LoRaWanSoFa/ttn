@@ -4,12 +4,10 @@
 package broker
 
 import (
-	"fmt"
 	"regexp"
 
 	"github.com/TheThingsNetwork/ttn/core"
 	"github.com/TheThingsNetwork/ttn/utils/errors"
-	jwt "github.com/dgrijalva/jwt-go"
 	"golang.org/x/net/context"
 )
 
@@ -21,10 +19,10 @@ func (b component) ValidateToken(bctx context.Context, req *core.ValidateTokenBr
 		b.Ctx.WithError(err).Debug("Unable to handle ValidateToken request")
 		return new(core.ValidateTokenBrokerRes), err
 	}
-	if err := b.validateToken(bctx, req.Token, req.AppEUI); err != nil {
-		b.Ctx.WithError(err).Debug("The token is invalid")
-		return new(core.ValidateTokenBrokerRes), err
-	}
+	// if err := b.validateToken(bctx, req.Token, req.AppEUI); err != nil {
+	// 	b.Ctx.WithError(err).Debug("The token is invalid")
+	// 	return new(core.ValidateTokenBrokerRes), err
+	// }
 	return new(core.ValidateTokenBrokerRes), nil
 }
 
@@ -40,10 +38,10 @@ func (b component) ValidateOTAA(bctx context.Context, req *core.ValidateOTAABrok
 		return new(core.ValidateOTAABrokerRes), err
 	}
 
-	// 2. Verify and validate the token
-	if err := b.validateToken(bctx, req.Token, req.AppEUI); err != nil {
-		return new(core.ValidateOTAABrokerRes), err
-	}
+	// // 2. Verify and validate the token
+	// if err := b.validateToken(bctx, req.Token, req.AppEUI); err != nil {
+	// 	return new(core.ValidateOTAABrokerRes), err
+	// }
 
 	// 3. Update the internal storage
 	b.Ctx.WithField("AppEUI", req.AppEUI).Debug("Request accepted by broker. Registering / Updating App.")
@@ -72,10 +70,10 @@ func (b component) UpsertABP(bctx context.Context, req *core.UpsertABPBrokerReq)
 		return new(core.UpsertABPBrokerRes), err
 	}
 
-	// 2. Verify and validate the token
-	if err := b.validateToken(bctx, req.Token, req.AppEUI); err != nil {
-		return new(core.UpsertABPBrokerRes), err
-	}
+	// // 2. Verify and validate the token
+	// if err := b.validateToken(bctx, req.Token, req.AppEUI); err != nil {
+	// 	return new(core.UpsertABPBrokerRes), err
+	// }
 
 	// 3. Update the internal storage
 	b.Ctx.WithField("AppEUI", req.AppEUI).WithField("DevAddr", req.DevAddr).Debug("Request accepted by broker. Registering device.")
@@ -110,10 +108,10 @@ func (b component) DeleteDevice(bctx context.Context, req *core.DeleteDeviceBrok
 		return new(core.DeleteDeviceBrokerRes), err
 	}
 
-	// 2. Verify and validate the token
-	if err := b.validateToken(bctx, req.Token, req.AppEUI); err != nil {
-		return new(core.DeleteDeviceBrokerRes), err
-	}
+	// // 2. Verify and validate the token
+	// if err := b.validateToken(bctx, req.Token, req.AppEUI); err != nil {
+	// 	return new(core.DeleteDeviceBrokerRes), err
+	// }
 
 	// 3. Update the internal storage
 	b.Ctx.WithField("AppEUI", req.AppEUI).WithField("DevEUI", req.DevEUI).Debug("Request accepted by broker. Deleting device.")
@@ -128,39 +126,39 @@ func (b component) DeleteDevice(bctx context.Context, req *core.DeleteDeviceBrok
 	return new(core.DeleteDeviceBrokerRes), nil
 }
 
-// validateToken verify an OAuth Bearer token pass through metadata during RPC
-func (b component) validateToken(ctx context.Context, token string, appEUI []byte) error {
-	var claims jwt.MapClaims
-	parsed, err := jwt.ParseWithClaims(token, &claims, func(token *jwt.Token) (interface{}, error) {
-		if b.TokenKeyProvider == nil {
-			return nil, errors.New(errors.Structural, "No token provider configured")
-		}
-		k, err := b.TokenKeyProvider.Get(false)
-		if err != nil {
-			return nil, err
-		}
-		if k.Algorithm != token.Header["alg"] {
-			return nil, errors.New(errors.Structural, fmt.Sprintf("Expected algorithm %v but got %v", k.Algorithm, token.Header["alg"]))
-		}
-		return []byte(k.Key), nil
-	})
-	if err != nil {
-		return errors.New(errors.Structural, fmt.Sprintf("Unable to parse token: %s", err.Error()))
-	}
-	if !parsed.Valid {
-		return errors.New(errors.Operational, "The token is not valid or is expired")
-	}
-
-	apps, ok := claims["apps"].([]interface{})
-	if !ok {
-		return fmt.Errorf("Invalid type of apps claim: %T", claims["apps"])
-	}
-
-	for _, a := range apps {
-		if s, ok := a.(string); ok && s == fmt.Sprintf("%X", appEUI) {
-			return nil
-		}
-	}
-
-	return errors.New(errors.Operational, "Unauthorized")
-}
+// // validateToken verify an OAuth Bearer token pass through metadata during RPC
+// func (b component) validateToken(ctx context.Context, token string, appEUI []byte) error {
+// 	var claims jwt.MapClaims
+// 	parsed, err := jwt.ParseWithClaims(token, &claims, func(token *jwt.Token) (interface{}, error) {
+// 		if b.TokenKeyProvider == nil {
+// 			return nil, errors.New(errors.Structural, "No token provider configured")
+// 		}
+// 		k, err := b.TokenKeyProvider.Get(false)
+// 		if err != nil {
+// 			return nil, err
+// 		}
+// 		if k.Algorithm != token.Header["alg"] {
+// 			return nil, errors.New(errors.Structural, fmt.Sprintf("Expected algorithm %v but got %v", k.Algorithm, token.Header["alg"]))
+// 		}
+// 		return []byte(k.Key), nil
+// 	})
+// 	if err != nil {
+// 		return errors.New(errors.Structural, fmt.Sprintf("Unable to parse token: %s", err.Error()))
+// 	}
+// 	if !parsed.Valid {
+// 		return errors.New(errors.Operational, "The token is not valid or is expired")
+// 	}
+//
+// 	apps, ok := claims["apps"].([]interface{})
+// 	if !ok {
+// 		return fmt.Errorf("Invalid type of apps claim: %T", claims["apps"])
+// 	}
+//
+// 	for _, a := range apps {
+// 		if s, ok := a.(string); ok && s == fmt.Sprintf("%X", appEUI) {
+// 			return nil
+// 		}
+// 	}
+//
+// 	return errors.New(errors.Operational, "Unauthorized")
+// }

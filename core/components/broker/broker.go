@@ -4,13 +4,12 @@
 package broker
 
 import (
-	"fmt"
 	"net"
 
 	"github.com/TheThingsNetwork/ttn/core"
 	"github.com/TheThingsNetwork/ttn/utils/errors"
 	"github.com/TheThingsNetwork/ttn/utils/stats"
-	"github.com/TheThingsNetwork/ttn/utils/tokenkey"
+	// "github.com/TheThingsNetwork/ttn/utils/tokenkey"
 	"github.com/apex/log"
 	"github.com/brocaar/lorawan"
 	"golang.org/x/net/context"
@@ -20,10 +19,10 @@ import (
 // component implements the core.BrokerServer interface
 type component struct {
 	Components
-	NetAddrUp        string
-	NetAddrDown      string
-	TokenKeyProvider tokenkey.Provider
-	MaxDevNonces     uint
+	NetAddrUp   string
+	NetAddrDown string
+	// TokenKeyProvider tokenkey.Provider
+	MaxDevNonces uint
 }
 
 // Components defines a structure to make the instantiation easier to read
@@ -35,9 +34,9 @@ type Components struct {
 
 // Options defines a structure to make the instantiation easier to read
 type Options struct {
-	NetAddrUp        string
-	NetAddrDown      string
-	TokenKeyProvider tokenkey.Provider
+	NetAddrUp   string
+	NetAddrDown string
+	// TokenKeyProvider tokenkey.Provider
 }
 
 // Interface defines the Broker interface
@@ -50,11 +49,11 @@ type Interface interface {
 // New construct a new Broker component
 func New(c Components, o Options) Interface {
 	return component{
-		Components:       c,
-		NetAddrUp:        o.NetAddrUp,
-		NetAddrDown:      o.NetAddrDown,
-		TokenKeyProvider: o.TokenKeyProvider,
-		MaxDevNonces:     10,
+		Components:  c,
+		NetAddrUp:   o.NetAddrUp,
+		NetAddrDown: o.NetAddrDown,
+		// TokenKeyProvider: o.TokenKeyProvider,
+		MaxDevNonces: 10,
 	}
 }
 
@@ -70,13 +69,13 @@ func (b component) Start() error {
 		return errors.New(errors.Operational, err)
 	}
 
-	if b.TokenKeyProvider != nil {
-		tokenKey, err := b.TokenKeyProvider.Get(true)
-		if err != nil {
-			return errors.New(errors.Operational, fmt.Sprintf("Failed to refresh token key: %s", err.Error()))
-		}
-		b.Ctx.WithField("provider", b.TokenKeyProvider).Infof("Got token key for algorithm %v", tokenKey.Algorithm)
-	}
+	// if b.TokenKeyProvider != nil {
+	// 	tokenKey, err := b.TokenKeyProvider.Get(true)
+	// 	if err != nil {
+	// 		return errors.New(errors.Operational, fmt.Sprintf("Failed to refresh token key: %s", err.Error()))
+	// 	}
+	// 	b.Ctx.WithField("provider", b.TokenKeyProvider).Infof("Got token key for algorithm %v", tokenKey.Algorithm)
+	// }
 
 	server := grpc.NewServer()
 	core.RegisterBrokerServer(server, b)
