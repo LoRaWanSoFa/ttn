@@ -6,10 +6,10 @@ package handler
 import (
 	"testing"
 
-	"github.com/TheThingsNetwork/ttn/core"
-	"github.com/TheThingsNetwork/ttn/core/mocks"
-	"github.com/TheThingsNetwork/ttn/utils/errors"
-	. "github.com/TheThingsNetwork/ttn/utils/testing"
+	"github.com/LoRaWanSoFa/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/core/mocks"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
+	. "github.com/LoRaWanSoFa/ttn/utils/testing"
 	"golang.org/x/net/context"
 )
 

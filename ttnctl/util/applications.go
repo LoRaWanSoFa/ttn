@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/TheThingsNetwork/ttn/core/types"
+	"github.com/LoRaWanSoFa/ttn/core/types"
 	"github.com/apex/log"
 	"github.com/spf13/viper"
 )

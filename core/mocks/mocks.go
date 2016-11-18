@@ -5,8 +5,8 @@
 package mocks
 
 import (
-	"github.com/TheThingsNetwork/ttn/core"
-	"github.com/TheThingsNetwork/ttn/core/dutycycle"
+	"github.com/LoRaWanSoFa/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/core/dutycycle"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )

@@ -6,7 +6,7 @@ package fields
 import (
 	"testing"
 
-	"github.com/TheThingsNetwork/ttn/core/types"
+	"github.com/LoRaWanSoFa/ttn/core/types"
 	. "github.com/smartystreets/assertions"
 )
 

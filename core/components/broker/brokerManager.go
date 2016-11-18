@@ -6,8 +6,8 @@ package broker
 import (
 	"regexp"
 
-	"github.com/TheThingsNetwork/ttn/core"
-	"github.com/TheThingsNetwork/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
 	"golang.org/x/net/context"
 )
 

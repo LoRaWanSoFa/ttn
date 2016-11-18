@@ -6,7 +6,7 @@ package handler
 import (
 	"testing"
 
-	. "github.com/TheThingsNetwork/ttn/utils/testing"
+	. "github.com/LoRaWanSoFa/ttn/utils/testing"
 )
 
 func TestQueue(t *testing.T) {

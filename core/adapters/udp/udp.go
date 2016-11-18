@@ -9,10 +9,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/TheThingsNetwork/ttn/core"
-	"github.com/TheThingsNetwork/ttn/semtech"
-	"github.com/TheThingsNetwork/ttn/utils/errors"
-	"github.com/TheThingsNetwork/ttn/utils/stats"
+	"github.com/LoRaWanSoFa/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/semtech"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/utils/stats"
 	"github.com/apex/log"
 	"golang.org/x/net/context"
 )

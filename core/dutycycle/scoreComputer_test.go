@@ -6,16 +6,16 @@ package dutycycle
 import (
 	"testing"
 
-	"github.com/TheThingsNetwork/ttn/core"
-	"github.com/TheThingsNetwork/ttn/utils/errors"
-	"github.com/TheThingsNetwork/ttn/utils/pointer"
-	. "github.com/TheThingsNetwork/ttn/utils/testing"
+	"github.com/LoRaWanSoFa/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/utils/pointer"
+	. "github.com/LoRaWanSoFa/ttn/utils/testing"
 )
 
 func TestNewScoreComputer(t *testing.T) {
 	{
 		Desc(t, "Invalid datr as argument")
-		_, _, err := NewScoreComputer(World, "TheThingsNetwork")
+		_, _, err := NewScoreComputer(World, "LoRaWanSoFa")
 		CheckErrors(t, pointer.String(string(errors.Structural)), err)
 	}
 

@@ -6,10 +6,10 @@ package router
 import (
 	"encoding"
 
-	"github.com/TheThingsNetwork/ttn/core"
-	dbutil "github.com/TheThingsNetwork/ttn/core/storage"
-	"github.com/TheThingsNetwork/ttn/utils/errors"
-	"github.com/TheThingsNetwork/ttn/utils/readwriter"
+	"github.com/LoRaWanSoFa/ttn/core"
+	dbutil "github.com/LoRaWanSoFa/ttn/core/storage"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/utils/readwriter"
 )
 
 var dbGateways = []byte("gateways")

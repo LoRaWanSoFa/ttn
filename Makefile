@@ -13,8 +13,8 @@ BUILD_DATE = `date -u +%Y-%m-%dT%H:%M:%SZ`
 
 LDFLAGS = -ldflags "-w -X main.gitCommit=${GIT_COMMIT} -X main.buildDate=${BUILD_DATE}"
 
-DEPS = `comm -23 <(sort <($(GOCMD) list -f '{{join .Imports "\n"}}' ./...) | uniq) <($(GOCMD) list std) | grep -v TheThingsNetwork`
-TEST_DEPS = `comm -23 <(sort <($(GOCMD) list -f '{{join .TestImports "\n"}}' ./...) | uniq) <($(GOCMD) list std) | grep -v TheThingsNetwork`
+DEPS = `comm -23 <(sort <($(GOCMD) list -f '{{join .Imports "\n"}}' ./...) | uniq) <($(GOCMD) list std) | grep -v LoRaWanSoFa`
+TEST_DEPS = `comm -23 <(sort <($(GOCMD) list -f '{{join .TestImports "\n"}}' ./...) | uniq) <($(GOCMD) list std) | grep -v LoRaWanSoFa`
 
 select_pkgs = $(GOCMD) list ./... | grep -vE 'vendor'
 coverage_pkgs = $(GOCMD) list ./... | grep -E 'core' | grep -vE 'core$$|mocks$$'

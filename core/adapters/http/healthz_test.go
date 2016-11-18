@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"testing"
 
-	. "github.com/TheThingsNetwork/ttn/utils/testing"
+	. "github.com/LoRaWanSoFa/ttn/utils/testing"
 	"github.com/smartystreets/assertions"
 )
 

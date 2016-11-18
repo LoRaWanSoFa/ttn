@@ -6,11 +6,11 @@ package dutycycle
 import (
 	"fmt"
 
-	"github.com/TheThingsNetwork/ttn/core"
-	"github.com/TheThingsNetwork/ttn/core/band"
-	"github.com/TheThingsNetwork/ttn/core/band/au915_928"
-	"github.com/TheThingsNetwork/ttn/core/band/us902_928"
-	"github.com/TheThingsNetwork/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/core/band"
+	"github.com/LoRaWanSoFa/ttn/core/band/au915_928"
+	"github.com/LoRaWanSoFa/ttn/core/band/us902_928"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
 )
 
 // ScoreComputer enables an external component to manipulate metadata associated to several targets

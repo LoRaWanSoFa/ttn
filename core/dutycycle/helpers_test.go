@@ -6,7 +6,7 @@ package dutycycle
 import (
 	"testing"
 
-	testutil "github.com/TheThingsNetwork/ttn/utils/testing"
+	testutil "github.com/LoRaWanSoFa/ttn/utils/testing"
 )
 
 // ----- CHECK utilities

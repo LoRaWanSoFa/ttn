@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TheThingsNetwork/ttn/core"
-	"github.com/TheThingsNetwork/ttn/core/mocks"
-	"github.com/TheThingsNetwork/ttn/utils/errors"
-	. "github.com/TheThingsNetwork/ttn/utils/testing"
+	"github.com/LoRaWanSoFa/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/core/mocks"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
+	. "github.com/LoRaWanSoFa/ttn/utils/testing"
 	"github.com/brocaar/lorawan"
 	"golang.org/x/net/context"
 )

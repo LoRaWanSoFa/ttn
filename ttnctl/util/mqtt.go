@@ -6,7 +6,7 @@ package util
 import (
 	"fmt"
 
-	"github.com/TheThingsNetwork/ttn/mqtt"
+	"github.com/LoRaWanSoFa/ttn/mqtt"
 	"github.com/apex/log"
 	"github.com/spf13/viper"
 )

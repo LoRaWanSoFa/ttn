@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TheThingsNetwork/ttn/utils/errors"
-	"github.com/TheThingsNetwork/ttn/utils/pointer"
-	. "github.com/TheThingsNetwork/ttn/utils/testing"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/utils/pointer"
+	. "github.com/LoRaWanSoFa/ttn/utils/testing"
 )
 
 var dutyManagerDB = path.Join(os.TempDir(), "TestDutyCycleStorage.db")

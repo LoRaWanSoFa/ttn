@@ -6,10 +6,10 @@ package broker
 import (
 	"net"
 
-	"github.com/TheThingsNetwork/ttn/core"
-	"github.com/TheThingsNetwork/ttn/utils/errors"
-	"github.com/TheThingsNetwork/ttn/utils/stats"
-	// "github.com/TheThingsNetwork/ttn/utils/tokenkey"
+	"github.com/LoRaWanSoFa/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/utils/stats"
+	// "github.com/LoRaWanSoFa/ttn/utils/tokenkey"
 	"github.com/apex/log"
 	"github.com/brocaar/lorawan"
 	"golang.org/x/net/context"

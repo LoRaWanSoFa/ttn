@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TheThingsNetwork/ttn/utils/pointer"
-	. "github.com/TheThingsNetwork/ttn/utils/testing"
+	"github.com/LoRaWanSoFa/ttn/utils/pointer"
+	. "github.com/LoRaWanSoFa/ttn/utils/testing"
 )
 
 func TestUnmarshalBinary(t *testing.T) {

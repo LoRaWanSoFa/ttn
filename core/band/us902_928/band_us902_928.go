@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"time"
 
-	. "github.com/TheThingsNetwork/ttn/core/band"
+	. "github.com/LoRaWanSoFa/ttn/core/band"
 )
 
 func init() {

@@ -13,8 +13,8 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/TheThingsNetwork/ttn/core/types"
-	"github.com/TheThingsNetwork/ttn/ttnctl/util"
+	"github.com/LoRaWanSoFa/ttn/core/types"
+	"github.com/LoRaWanSoFa/ttn/ttnctl/util"
 	"github.com/apex/log"
 	"github.com/gosuri/uitable"
 	"github.com/mitchellh/go-homedir"

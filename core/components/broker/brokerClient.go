@@ -6,7 +6,7 @@ package broker
 import (
 	"time"
 
-	"github.com/TheThingsNetwork/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/core"
 	"google.golang.org/grpc"
 )
 

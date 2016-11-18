@@ -4,10 +4,10 @@
 package fields
 
 import (
-	"github.com/TheThingsNetwork/ttn/core"
-	"github.com/TheThingsNetwork/ttn/core/adapters/mqtt"
-	"github.com/TheThingsNetwork/ttn/core/types"
-	"github.com/TheThingsNetwork/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/core/adapters/mqtt"
+	"github.com/LoRaWanSoFa/ttn/core/types"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
 	"github.com/apex/log"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"

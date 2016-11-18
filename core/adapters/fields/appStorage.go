@@ -8,7 +8,7 @@ import (
 
 	"gopkg.in/redis.v3"
 
-	"github.com/TheThingsNetwork/ttn/core/types"
+	"github.com/LoRaWanSoFa/ttn/core/types"
 )
 
 const appKey = "fields:app:%s"

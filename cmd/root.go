@@ -8,7 +8,7 @@ import (
 	"os"
 	"strings"
 
-	cliHandler "github.com/TheThingsNetwork/ttn/utils/cli/handler"
+	cliHandler "github.com/LoRaWanSoFa/ttn/utils/cli/handler"
 	"github.com/apex/log"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

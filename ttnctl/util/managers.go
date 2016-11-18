@@ -1,8 +1,8 @@
 package util
 
 import (
-	"github.com/TheThingsNetwork/ttn/core"
-	"github.com/TheThingsNetwork/ttn/core/components/handler"
+	"github.com/LoRaWanSoFa/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/core/components/handler"
 	"github.com/apex/log"
 	"github.com/spf13/viper"
 )

@@ -6,7 +6,7 @@ package otaa
 import (
 	"crypto/aes"
 
-	"github.com/TheThingsNetwork/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
 )
 
 // CalculateSessionKeys calculates the AppSKey and NwkSKey

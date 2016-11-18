@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/TheThingsNetwork/ttn/utils/testing"
+	. "github.com/LoRaWanSoFa/ttn/utils/testing"
 )
 
 // MockHandler mocks the http.Handler interface

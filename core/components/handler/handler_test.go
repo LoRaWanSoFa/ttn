@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TheThingsNetwork/ttn/core"
-	"github.com/TheThingsNetwork/ttn/core/dutycycle"
-	"github.com/TheThingsNetwork/ttn/core/mocks"
-	"github.com/TheThingsNetwork/ttn/utils/errors"
-	. "github.com/TheThingsNetwork/ttn/utils/testing"
+	"github.com/LoRaWanSoFa/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/core/dutycycle"
+	"github.com/LoRaWanSoFa/ttn/core/mocks"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
+	. "github.com/LoRaWanSoFa/ttn/utils/testing"
 	"github.com/brocaar/lorawan"
 	"golang.org/x/net/context"
 )
@@ -29,7 +29,7 @@ func TestHandleDataDown(t *testing.T) {
 		req := &core.DataDownHandlerReq{
 			AppEUI:  []byte{1, 1, 1, 1, 1, 1, 1, 1},
 			DevEUI:  []byte{2, 2, 2, 2, 2, 2, 2, 2},
-			Payload: []byte("TheThingsNetwork"),
+			Payload: []byte("LoRaWanSoFa"),
 			TTL:     "2h",
 		}
 
@@ -106,7 +106,7 @@ func TestHandleDataDown(t *testing.T) {
 			AppEUI:  []byte{1, 1, 1, 1, 1},
 			DevEUI:  []byte{2, 2, 2, 2, 2, 2, 2, 2},
 			TTL:     "2h",
-			Payload: []byte("TheThingsNetwork"),
+			Payload: []byte("LoRaWanSoFa"),
 		}
 
 		// Expect
@@ -144,7 +144,7 @@ func TestHandleDataDown(t *testing.T) {
 			AppEUI:  []byte{1, 1, 1, 1, 1, 1, 1, 1},
 			DevEUI:  []byte{2, 2, 2, 2, 2, 2, 2, 2, 2},
 			TTL:     "2h",
-			Payload: []byte("TheThingsNetwork"),
+			Payload: []byte("LoRaWanSoFa"),
 		}
 
 		// Expect
@@ -182,7 +182,7 @@ func TestHandleDataDown(t *testing.T) {
 			AppEUI:  []byte{1, 1, 1, 1, 1, 1, 1, 1},
 			DevEUI:  []byte{2, 2, 2, 2, 2, 2, 2, 2, 2},
 			TTL:     "0s",
-			Payload: []byte("TheThingsNetwork"),
+			Payload: []byte("LoRaWanSoFa"),
 		}
 
 		// Expect

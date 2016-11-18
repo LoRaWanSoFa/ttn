@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/TheThingsNetwork/ttn/utils/errors"
-	"github.com/TheThingsNetwork/ttn/utils/stats"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/utils/stats"
 	"github.com/rcrowley/go-metrics"
 )
 

@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/TheThingsNetwork/ttn/utils/pointer"
+	"github.com/LoRaWanSoFa/ttn/utils/pointer"
 )
 
 type DeviceAddress [4]byte

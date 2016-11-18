@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"testing"
 
-	. "github.com/TheThingsNetwork/ttn/core/band"
+	. "github.com/LoRaWanSoFa/ttn/core/band"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

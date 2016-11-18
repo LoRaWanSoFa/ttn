@@ -9,7 +9,7 @@ import (
 	"path"
 	"testing"
 
-	. "github.com/TheThingsNetwork/ttn/utils/testing"
+	. "github.com/LoRaWanSoFa/ttn/utils/testing"
 )
 
 const database = "TestStoreAndLookup.db"

@@ -10,9 +10,9 @@ import (
 	"sync"
 	"time"
 
-	dbutil "github.com/TheThingsNetwork/ttn/core/storage"
-	"github.com/TheThingsNetwork/ttn/utils/errors"
-	"github.com/TheThingsNetwork/ttn/utils/readwriter"
+	dbutil "github.com/LoRaWanSoFa/ttn/core/storage"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/utils/readwriter"
 )
 
 var dbBrokers = []byte("brokers")

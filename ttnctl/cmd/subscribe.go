@@ -8,10 +8,10 @@ import (
 	"os/signal"
 	"regexp"
 
-	"github.com/TheThingsNetwork/ttn/core"
-	"github.com/TheThingsNetwork/ttn/core/types"
-	"github.com/TheThingsNetwork/ttn/mqtt"
-	"github.com/TheThingsNetwork/ttn/ttnctl/util"
+	"github.com/LoRaWanSoFa/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/core/types"
+	"github.com/LoRaWanSoFa/ttn/mqtt"
+	"github.com/LoRaWanSoFa/ttn/ttnctl/util"
 	"github.com/spf13/cobra"
 )
 

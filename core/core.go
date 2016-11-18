@@ -8,8 +8,8 @@ package core
 import (
 	"reflect"
 
-	"github.com/TheThingsNetwork/ttn/utils/errors"
-	"github.com/TheThingsNetwork/ttn/utils/pointer"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/utils/pointer"
 	"github.com/brocaar/lorawan"
 )
 

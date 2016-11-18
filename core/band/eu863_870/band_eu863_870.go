@@ -8,7 +8,7 @@ import (
 	"errors"
 	"time"
 
-	. "github.com/TheThingsNetwork/ttn/core/band"
+	. "github.com/LoRaWanSoFa/ttn/core/band"
 )
 
 // Name defines the name of the band

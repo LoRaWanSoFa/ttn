@@ -6,10 +6,10 @@ package handler
 import (
 	"encoding/json"
 
-	"github.com/TheThingsNetwork/ttn/core"
-	"github.com/TheThingsNetwork/ttn/core/adapters/fields"
-	"github.com/TheThingsNetwork/ttn/core/types"
-	"github.com/TheThingsNetwork/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/core/adapters/fields"
+	"github.com/LoRaWanSoFa/ttn/core/types"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
 	"golang.org/x/net/context"
 )
 

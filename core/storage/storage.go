@@ -9,8 +9,8 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/TheThingsNetwork/ttn/utils/errors"
-	"github.com/TheThingsNetwork/ttn/utils/readwriter"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/utils/readwriter"
 	"github.com/boltdb/bolt"
 )
 

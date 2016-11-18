@@ -4,7 +4,7 @@
 package broker
 
 import (
-	"github.com/TheThingsNetwork/ttn/core"
+	"github.com/LoRaWanSoFa/ttn/core"
 )
 
 // NOTE All the code below could be generated

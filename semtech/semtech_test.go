@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/TheThingsNetwork/ttn/utils/pointer"
-	testutil "github.com/TheThingsNetwork/ttn/utils/testing"
+	"github.com/LoRaWanSoFa/ttn/utils/pointer"
+	testutil "github.com/LoRaWanSoFa/ttn/utils/testing"
 )
 
 func TestString(t *testing.T) {
