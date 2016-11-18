@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/TheThingsNetwork/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
 	"github.com/brocaar/lorawan"
 )
 

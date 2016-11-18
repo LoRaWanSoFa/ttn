@@ -4,7 +4,7 @@
 package shield
 
 import (
-	"github.com/TheThingsNetwork/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
 )
 
 // Interfaces materializes the public API of a shield.

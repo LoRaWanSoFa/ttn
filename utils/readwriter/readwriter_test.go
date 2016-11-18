@@ -8,9 +8,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/TheThingsNetwork/ttn/utils/errors"
-	"github.com/TheThingsNetwork/ttn/utils/pointer"
-	. "github.com/TheThingsNetwork/ttn/utils/testing"
+	"github.com/LoRaWanSoFa/ttn/utils/errors"
+	"github.com/LoRaWanSoFa/ttn/utils/pointer"
+	. "github.com/LoRaWanSoFa/ttn/utils/testing"
 	"github.com/brocaar/lorawan"
 )
 
@@ -104,12 +104,12 @@ func TestReadWriter(t *testing.T) {
 	{
 		Desc(t, "Write string")
 		rw := New(nil)
-		rw.Write("TheThingsNetwork")
+		rw.Write("LoRaWanSoFa")
 		data, err := rw.Bytes()
 		CheckErrors(t, nil, err)
 
 		rw = New(data)
-		rw.Read(func(data []byte) { checkData(t, []byte("TheThingsNetwork"), data) })
+		rw.Read(func(data []byte) { checkData(t, []byte("LoRaWanSoFa"), data) })
 		CheckErrors(t, nil, rw.Err())
 	}
 
